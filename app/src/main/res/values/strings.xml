@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">PUBG Tips</string>
+    <string name="get_start_text">
+        "PUBG’s mobile versions, both for Android and iPhone, "
+        "translate large-scale battle royale to the small screen remarkably well—and best of all, "
+        "they’re completely free."
+    </string>
+    <string name="tips_text">
+        "Read our guide on how to become a master of Player Unknown\'s Battlegrounds on mobile."
+        "Our top tips and tricks for PUBG to help you get …"
+        "Check out the full list of PUBG Mobile tips and tricks to learn where to land,"
+        "important loot, and other tips for beginners and experts!"
+    </string>
+    <string name="weapon_tire_list_text">
+        "Welcome to our PlayerUnknown’s Battlegrounds Best Weapons Tier List."
+        "You can view the TOP 3 Best Guns in PUBG for each weapon type, like Snipers, Assault Rifles, and even Shotguns."
+        "The PUBG Best Weapons Tier List is based on accumulated weapons stats"
+    </string>
+    <string name="ar_description">
+        "Click to show whole Assault Rifles (AR) sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="sg_description">
+        "Click to show whole Shotgun sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="smg_description">
+        "Click to show whole Sub Machine Guns sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="sniper_description">
+        "Click to show whole Snipers sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="pistol_description">
+        "Click to show whole Pistol sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="grenade_description">
+        "Click to show whole Grenade sorted by Rank."
+        "The Rank is according to the damage of the Weapon"
+    </string>
+    <string name="attach_description">
+        "Click to show whole Attachments used for corresponding weapons"
+    </string>
+    <string name="groza_description">
+        Found only in supply drops. One of the strongest damage in Assault Rifles.
+    </string>
+    <string name="m416_description">
+        Effective in all situations with high firepower. Equip all attachments to increase damage &amp; usability.
+    </string>
+    <string name="akm_description">
+        This weapon has high damage but has very high recoil so shoot in bursts to control gun movement.
+    </string>
+    <string name="scarl_description">
+        Equip attachments- to control recoil &amp; stability, making this weapon even more powerful.
+    </string>
+    <string name="m16a4_description">
+        Shooting is unstable so fire in bursts to control weapon\'s recoil.
+    </string>
+    <string name="s12k_description">
+        A very beginner-friendly shotgun that is capable of going full-auto for rapid fire shots.
+    </string>
+    <string name="s686_description">
+        Extremely high damage in short range. Effective in close quarter fights where opponents are not fully-equipped.
+    </string>
+    <string name="s1897_description">
+        Powerful in the early game but damage &amp; firepower is lower than most shotguns in-game.
+    </string>
+    <string name="awm_description">
+        Obtainable only through supply drops. Strong damage that can penetrate a Level 3 helmet!
+    </string>
+    <string name="m24_description">
+        Can only get through supply drops. A more powerful version of Kar98K.
+    </string>
+    <string name="kar98_description">
+        Not as powerful as others but accessible and one of the few sniper rifles lootable from the ground.
+    </string>
+    <string name="sks_description">
+        This marksman rifle has large DPS and rapid fire rate but has high recoil.
+    </string>
+    <string name="slr_description">
+        Another marksman rifle with high amount of recoil but has higher damage &amp; fire rate than the SKS.
+    </string>
+    <string name="mk14_description">
+        This DMR is capable of going full-auto and is only available through supply drops.
+    </string>
+    <string name="mini14_description">
+        Not as powerful as other marksman rifles but is easy to use &amp; has low recoil.
+    </string>
+    <string name="vss_description">
+        Weapon comes with built-in suppressor &amp; scope but damage output is low and bullet drop is very high.
+    </string>
+    <string name="m249_description">
+        100-bullet magazine so you can shoot all you can! Reloading is long so reload when out of combat.
+    </string>
+    <string name="uzi_description">
+        Powerful in short range combat. Equip an extended magazine for sustainability.
+    </string>
+    <string name="ump9_description">
+        Can be used as an alternative to an Assault Rifle. Has low fire power but also very stable due to low recoil.
+    </string>
+    <string name="vector_description">
+        Has low magazine capacity so equip an extended magazine to increase sustainability.
+    </string>
+    <string name="tommy_description">
+        Has fast fire rate and not as powerful in mid-long range combat, utilize in short range fights!
+    </string>
+    <string name="dp28_description">
+        Low recoil with a big magazine capacity. Slow reload speed but attachments are unnecessary to be effective.
+    </string>
+    <string name="p92_description">
+        The P92 has balanced stats from its fire power, magazine size, up to its rate of fire. It\'s recoil is not so bad as well
+    </string>
+    <string name="p1911_description">
+        The P1911 is a powerful pistol, dealing 35 damage with every shot.
+        Three successful shots and it will have an unarmored player down.
+    </string>
+    <string name="r1895_description">
+        The R1895 is a vintage revolver that utilizes the same ammo as the AKM, GROZA, Kar98K, among others.
+        This allows easy loadout management &amp; you don\'t have to search for two separate types of ammo.
+    </string>
+    <string name="p18c_description">
+        The P18C is currently the only handgun that has full auto shooting mode.
+        Players can rain bullets on opponents &amp; eliminate them instantly in close range combat
+    </string>
+    <string name="r45_description">
+        The R45 packs a big punch, dealing 46 damage per shot. However, this is counteracted by it\'s relatively slow firing speed.
+    </string>
+</resources>

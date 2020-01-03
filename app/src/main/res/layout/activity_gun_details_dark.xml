@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".GunDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/toolbar_background_dark"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/orbitron_bold"
+                android:text="Weapon Details"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:id="@+id/share_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_background"
+                android:src="@drawable/ic_share_black_24dp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_outline_light">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:text="AWM"
+                    android:textColor="#008AFC"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/view_color" />
+
+                <RelativeLayout
+                    android:id="@+id/gauge_lay"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/awm" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/circle_gun" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/circle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/type_bg"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:padding="5dp"
+                        android:text="Rank 1"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_toEndOf="@id/gauge_lay"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="6dp"
+                        android:fontFamily="@font/jura_regular"
+                        android:padding="6dp"
+                        android:text="@string/awm_description"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ammo_image"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@mipmap/b556" />
+
+                        <TextView
+                            android:id="@+id/ammo_gauge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/orbitron_medium"
+                            android:text="5.56"
+                            android:textColor="#FF2A1A"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@id/title"
+                    android:background="@drawable/type_bg"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:padding="5dp"
+                    android:text="Sniper"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_outline_light"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Weapon Statistics"
+                    android:textColor="#0E87E7"
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="Damage"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/damage"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/val_damage"
+                        app:rcBackgroundColor="#4D000000"
+                        app:rcBackgroundPadding="3dp"
+                        app:rcMax="150"
+                        app:rcProgressColor="#00E709"
+                        app:rcRadius="10dp"
+                        app:rcReverse="false" />
+
+                    <TextView
+                        android:id="@+id/val_damage"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="130"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="Range (Meter)"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/range"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/val_range"
+                        app:rcBackgroundColor="#4D000000"
+                        app:rcBackgroundPadding="3dp"
+                        app:rcMax="1200"
+                        app:rcProgressColor="#8445F3"
+                        app:rcRadius="10dp"
+                        app:rcReverse="false" />
+
+                    <TextView
+                        android:id="@+id/val_range"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="130"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="Magazine Capacity"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/mag"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/val_mag"
+                        app:rcBackgroundColor="#4D000000"
+                        app:rcBackgroundPadding="3dp"
+                        app:rcMax="100"
+                        app:rcProgressColor="#2196F3"
+                        app:rcRadius="10dp"
+                        app:rcReverse="false" />
+
+                    <TextView
+                        android:id="@+id/val_mag"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="Bullet Speed(m/s)"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/val_speed"
+                        app:rcBackgroundColor="#4D000000"
+                        app:rcBackgroundPadding="3dp"
+                        app:rcMax="1000"
+                        app:rcProgressColor="#42F3E3"
+                        app:rcRadius="10dp"
+                        app:rcReverse="false" />
+
+                    <TextView
+                        android:id="@+id/val_speed"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="Fire Rate(s)"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/val_rate"
+                        app:rcBackgroundColor="#4D000000"
+                        app:rcBackgroundPadding="3dp"
+                        app:rcMax="2"
+                        app:rcProgressColor="#DFEE4C"
+                        app:rcRadius="10dp"
+                        app:rcReverse="false" />
+
+                    <TextView
+                        android:id="@+id/val_rate"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:text="1000"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/attachment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_outline_light"
+                android:fontFamily="@font/orbitron_bold"
+                android:gravity="center"
+                android:text="Find Attachments"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/loadout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_outline_light"
+                android:fontFamily="@font/orbitron_bold"
+                android:gravity="center"
+                android:text="Find Best Loadout"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

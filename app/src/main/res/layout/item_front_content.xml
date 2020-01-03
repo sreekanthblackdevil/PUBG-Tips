@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/content_outline">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/orbitron_medium"
+        android:text="Title"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/image"
+        android:fontFamily="@font/jura_regular"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="1dp"
+        android:paddingBottom="5dp"
+        android:text="Some contents sfjckgdvbjhxcbv szcbhsc sdzhvsjzc  Zcbjzhxv x szfchvhjscz FcbslkfhZBv jsbczbv sbczxbv "
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/text"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/jura_regular"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Go to Somewhere"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#085A0D"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/button"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#34949494" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_launcher_background" />
+
+</RelativeLayout>
