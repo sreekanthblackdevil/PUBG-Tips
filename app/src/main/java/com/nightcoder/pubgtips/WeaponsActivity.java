@@ -71,7 +71,7 @@ public class WeaponsActivity extends AppCompatActivity {
                 R.mipmap.shotgun
         ));
         weapons.add(new WeaponTypeModel(
-                "Snipers",
+                "Snipers & DMR",
                 getResources().getString(R.string.sniper_description),
                 R.mipmap.sniper
         ));

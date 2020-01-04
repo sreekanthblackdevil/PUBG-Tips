@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,6 +46,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/adView"
         android:layout_below="@id/toolbar">
 
         <LinearLayout
@@ -401,6 +403,111 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/content_outline_light"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Damage"
+                    android:textColor="#2196F3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="The per shot damage without any multipliers applied."
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Magazine Capacity"
+                    android:textColor="#2196F3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="The amount of Ammo you can fit into your gun at one time."
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Fire Rate"
+                    android:textColor="#2196F3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="The effective rate of fire, in other words, the time between each bullet shot."
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Range"
+                    android:textColor="#2196F3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="The effective range before the damage is reduced to 0. (Measured using Zeroing)"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/orbitron_medium"
+                    android:text="Bullet Speed"
+                    android:textColor="#2196F3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="The speed in which the bullet travels from the barrel of the gun to aimed location. (The Higher the Number the less you will need to lead your shoots.)"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/attachment"
                 android:layout_width="match_parent"
@@ -408,6 +515,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/content_outline_light"
                 android:fontFamily="@font/orbitron_bold"
+                android:foreground="?android:selectableItemBackground"
                 android:gravity="center"
                 android:text="Find Attachments"
                 android:textAlignment="center"
@@ -421,6 +529,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/content_outline_light"
                 android:fontFamily="@font/orbitron_bold"
+                android:foreground="?android:selectableItemBackground"
                 android:gravity="center"
                 android:text="Find Best Loadout"
                 android:textAlignment="center"
@@ -430,5 +539,12 @@
         </LinearLayout>
     </ScrollView>
 
-
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_id" />
 </RelativeLayout>

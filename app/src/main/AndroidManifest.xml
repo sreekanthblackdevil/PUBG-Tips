@@ -4,15 +4,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/pubg_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/pubg_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GunDetailsActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+
+        <activity android:name=".GunDetailsActivity"
+            android:theme="@style/AppThemeLight"/>
         <activity android:name=".WeaponsListActivity" />
         <activity android:name=".GetStartActivity" />
-        <activity android:name=".TipsActivity" />
+        <activity android:name=".TipsActivity" />   
         <activity android:name=".WeaponsActivity" />
         <activity android:name=".BasicActivity" />
         <activity android:name=".MainActivity">

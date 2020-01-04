@@ -85,6 +85,10 @@ public class WeaponTypeAdapter extends RecyclerView.Adapter<WeaponTypeAdapter.Vi
                         mContext.startActivity(new Intent(mContext, WeaponsListActivity.class)
                                 .putExtra("type", "GRENADE"));
                         break;
+                    case R.mipmap.rifle1:
+                        mContext.startActivity(new Intent(mContext, WeaponsListActivity.class)
+                                .putExtra("type", "ATTACHMENT"));
+                        break;
                 }
             }
         });

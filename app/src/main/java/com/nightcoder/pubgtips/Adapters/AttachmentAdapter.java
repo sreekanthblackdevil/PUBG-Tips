@@ -15,18 +15,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.nightcoder.pubgtips.GunDetailsActivity;
+import com.nightcoder.pubgtips.Models.Attachments;
 import com.nightcoder.pubgtips.Models.Weapons;
 import com.nightcoder.pubgtips.R;
 
 import java.util.List;
 
-public class WeaponsAdapter extends RecyclerView.Adapter<WeaponsAdapter.ViewHolder> {
+public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<Weapons> mWeapons;
+    private List<Attachments> mWeapons;
     private boolean darkMode;
 
-    public WeaponsAdapter(Context context, List<Weapons> weapons, boolean mode) {
+    public AttachmentAdapter(Context context, List<Attachments> weapons, boolean mode) {
         this.darkMode = mode;
         this.mWeapons = weapons;
         this.mContext = context;
@@ -36,30 +37,21 @@ public class WeaponsAdapter extends RecyclerView.Adapter<WeaponsAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == 0)
-            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.weapon_item, parent, false));
+            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_attachment, parent, false));
         else
-            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.weapon_item_dark, parent, false));
+            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_attachment, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Weapons weapon = mWeapons.get(position);
+        final Attachments weapon = mWeapons.get(position);
         holder.title.setText(weapon.getTitle());
-        holder.range.setProgress(weapon.getRange());
-        holder.damage.setProgress(weapon.getDamage());
-        holder.gun.setImageResource(weapon.getWeaponImageId());
-        holder.ammo.setImageResource(weapon.getAmmoImageId());
-        holder.ammoName.setText(weapon.getAmmoGuage());
+        holder.type.setText(weapon.getType());
+        holder.about.setText(weapon.getAbout());
+        holder.image.setImageResource(weapon.getImageId());
 
         holder.container.setVisibility(View.VISIBLE);
         holder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.feature_item_animation));
-        holder.container.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GunDetailsActivity.class)
-                        .putExtra("weapon", weapon));
-            }
-        });
     }
 
     @Override
@@ -76,22 +68,19 @@ public class WeaponsAdapter extends RecyclerView.Adapter<WeaponsAdapter.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title, ammoName;
-        private ImageView ammo, gun;
-        private RoundCornerProgressBar damage, range;
+        private TextView title, about, type;
+        private ImageView image;
         private RelativeLayout container;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            damage = itemView.findViewById(R.id.damage);
-            range = itemView.findViewById(R.id.range);
             title = itemView.findViewById(R.id.title);
             container = itemView.findViewById(R.id.container);
             container.setVisibility(View.GONE);
-            ammo = itemView.findViewById(R.id.bullet);
-            gun = itemView.findViewById(R.id.gun);
-            ammoName = itemView.findViewById(R.id.ammo_name);
+            about = itemView.findViewById(R.id.about);
+            image = itemView.findViewById(R.id.image);
+            type = itemView.findViewById(R.id.type);
         }
     }
 }

@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">PUBG Tips</string>
+
+    <!-- Test Ads -->
+    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--Genuine Ads-->
+    <!--    <string name="app_id">ca-app-pub-5225299964519935~1292643053</string>-->
+    <!--    <string name="banner_id">ca-app-pub-5225299964519935/5412346300</string>-->
+    <!--    <string name="interstitial_id">ca-app-pub-5225299964519935/2115905604</string>-->
+
+
     <string name="get_start_text">
         "PUBG’s mobile versions, both for Android and iPhone, "
         "translate large-scale battle royale to the small screen remarkably well—and best of all, "
@@ -126,5 +138,105 @@
     </string>
     <string name="r45_description">
         The R45 packs a big punch, dealing 46 damage per shot. However, this is counteracted by it\'s relatively slow firing speed.
+    </string>
+    <string name="win98">
+        The Win94 is a unique Sniper Rifle in the fact that it cannot be equipped with any scope.
+        This makes it harder to aim and restricts its effectiveness to short- to mid-range.
+    </string>
+    <string name="stun_grenade">
+        Will cause strong disorientation to everyone within the blast radius (~5m)
+        in the form of a loud ringing and a strong reduction in framerate.
+        It should be noted that the Stun Grenade ignores cover (rocks, walls) and can affect the user,
+        making it unsafe to use for clearing buildings.
+    </string>
+    <string name="frag_grenade">
+        Explosive charge to fragment the outer shell of the grenade in a shaped or radial pattern.
+    </string>
+    <string name="moloto_cocktail">
+        This best use for Molotov is an AOE Denial, for example, using the fire from the Molotov on a
+        stair case making it difficult for the enemy to cross the choke point from the burning AOE Damage.
+    </string>
+    <string name="smoke_grenade">
+        Temporarily removes battlefield Vision allowing for sneaky reposition or just a good ole plain escape.
+    </string>
+    <string name="ar_fh">
+        Hides the flash effect when the weapon is fired, and by thus making it far harder to see your precise location.
+        The hider also provide some recoil reductions.\n
+-10.00% Recoil Pattern\n
+-10.00% Horizontal Recoil\n
+-10.00% Vertical Recoil
+    </string>
+    <string name="ar_comp">
+        Counter the recoil of a firearm and prevent the muzzle from climbing due to kickback from the rapid firing.\n
+-25.00% Recoil Pattern\n
+-10.00% Horizontal Recoil\n
+-15.00% Vertical Recoil\n
+-10.00% Spread Base
+    </string>
+    <string name="af">
+        Reduces horizontal recoil and increases how fast you ADS (Aim Down Sights).\n
+-20.00% Horizontal Recoil\n
+-20.00% Recoil Pattern\n
++10.00% Faster ADS
+    </string>
+    <string name="vf">
+        Reduces horizontal recoil and the spray pattern.\n
+-20.00% Horizontal Recoil\n
+-15.00% Recoil Pattern
+    </string>
+    <string name="stock">
+        Improved accuracy and stability.\n
+-10.00% Animation Kick\n
+-10.00% Sway\n
+-20.00% Recoil Pattern\n
++15.00% Recoil Recovery
+    </string>
+    <string name="chock">
+        The choke makes the shotgun spread less, making longer shots easier.\n
+-18.20% Shot Spread\n
++15.40% Shot Speed
+    </string>
+    <string name="smg_comp">
+        Counter the recoil of a firearm and prevent the muzzle from climbing due to kickback from the rapid firing.\n
+-25.00% Recoil Pattern\n
+-20.00% Horizontal Recoil\n
+-25.00% Vertical Recoil
+    </string>
+    <string name="sn_comp">
+        Counter the recoil of a firearm and prevent the muzzle from climbing due to kickback from the rapid firing.\n
+-25.00% Recoil Pattern\n
+-20.00% Horizontal Recoil\n
+-20.00% Vertical Recoil
+    </string>
+    <string name="sn_fh">
+        Hides the flash effect when the weapon is fired, and by thus making it far harder to see your precise location.
+        The hider also provide some recoil reductions.\n
+-10.00% Recoil Pattern\n
+-10.00% Horizontal Recoil\n
+-10.00% Vertical Recoil
+    </string>
+    <string name="smg_fh">
+        Hides the flash effect when the weapon is fired, and by thus making it
+        far harder to see your precise location. The hider also provide some recoil reductions.\n
+-10.00% Recoil Pattern\n
+-10.00% Horizontal Recoil\n
+-10.00% Vertical Recoil
+    </string>
+    <string name="stock_uzi">
+        Improved accuracy and stability.\n
+-20.00% Vertical Recoil\n
+-20.00% Recoil Pattern\n
++15.00% Recoil Recovery
+    </string>
+    <string name="check_pad">
+        Improved accuracy and stability.\n
+-20.00% Animation Kick\n
+-15.00% Sway\n
+-20.00% Vertical Recoil
+    </string>
+    <string name="bl_k">
+        Improved accuracy and stability.\n
+-30.00% Reload Duration\n
+-50.00% Spread Base
     </string>
 </resources>

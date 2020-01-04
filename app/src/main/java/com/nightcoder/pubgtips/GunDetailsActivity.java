@@ -1,7 +1,5 @@
 package com.nightcoder.pubgtips;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,12 +9,20 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nightcoder.pubgtips.Models.Weapons;
 import com.nightcoder.pubgtips.Supports.Checks;
 
 public class GunDetailsActivity extends AppCompatActivity {
 
+
+    private InterstitialAd interstitialAd;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -34,6 +40,8 @@ public class GunDetailsActivity extends AppCompatActivity {
             setContentView(R.layout.activity_gun_details_dark);
             window.setStatusBarColor(getResources().getColor(R.color.dark));
         }
+
+        loadAds();
 
         TextView title = findViewById(R.id.title);
         TextView ammo_gauge = findViewById(R.id.ammo_gauge);
@@ -73,5 +81,28 @@ public class GunDetailsActivity extends AppCompatActivity {
         speed_val.setText(String.valueOf(weapon.getBulletSpeed()));
         rate_val.setText(String.valueOf(weapon.getFireRate()));
 
+    }
+
+    private void loadAds() {
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getResources().getString(R.string.interstitial_id));
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+        interstitialAd.setAdListener(adListener);
+        AdView adView = findViewById(R.id.adView);
+        adView.loadAd(new AdRequest.Builder().build());
+    }
+
+    private AdListener adListener = new AdListener() {
+        @Override
+        public void onAdLoaded() {
+            super.onAdLoaded();
+            interstitialAd.show();
+        }
+    };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        interstitialAd.setAdListener(null);
     }
 }
