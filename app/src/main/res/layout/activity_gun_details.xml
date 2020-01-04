@@ -514,21 +514,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/loadout"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/content_outline"
-                android:fontFamily="@font/orbitron_bold"
-                android:foreground="?android:selectableItemBackground"
-                android:gravity="center"
-                android:text="Find Best Loadout"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
         </LinearLayout>
     </ScrollView>
 

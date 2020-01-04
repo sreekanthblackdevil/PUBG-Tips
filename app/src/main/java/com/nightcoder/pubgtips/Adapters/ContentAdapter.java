@@ -19,6 +19,7 @@ import com.nightcoder.pubgtips.Models.Contents;
 import com.nightcoder.pubgtips.R;
 import com.nightcoder.pubgtips.TipsActivity;
 import com.nightcoder.pubgtips.WeaponsActivity;
+import com.nightcoder.pubgtips.WeaponsListActivity;
 
 import java.util.List;
 
@@ -77,6 +78,9 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
                         break;
                     case R.mipmap.rifle:
                         mContext.startActivity(new Intent(mContext, WeaponsActivity.class));
+                        break;
+                    case R.mipmap.car:
+                        mContext.startActivity(new Intent(mContext, WeaponsListActivity.class).putExtra("type", "VEHICLE"));
                         break;
 
                 }

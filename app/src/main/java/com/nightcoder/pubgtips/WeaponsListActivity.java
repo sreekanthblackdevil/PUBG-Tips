@@ -16,9 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.nightcoder.pubgtips.Adapters.AttachmentAdapter;
 import com.nightcoder.pubgtips.Adapters.GrenadeAdapter;
+import com.nightcoder.pubgtips.Adapters.VehicleAdapter;
 import com.nightcoder.pubgtips.Adapters.WeaponsAdapter;
 import com.nightcoder.pubgtips.Models.Attachments;
 import com.nightcoder.pubgtips.Models.Grenades;
+import com.nightcoder.pubgtips.Models.Vehicles;
 import com.nightcoder.pubgtips.Models.Weapons;
 import com.nightcoder.pubgtips.Supports.Checks;
 
@@ -57,6 +59,35 @@ public class WeaponsListActivity extends AppCompatActivity {
         }
     }
 
+    private void addVehicle(boolean mode) {
+        ArrayList<Vehicles> vehicles = new ArrayList<>();
+
+        vehicles.add(new Vehicles("UAZ (Closed Top)", getResources().getString(R.string.uaz_ct), "Erangal, Sanhok",
+                R.mipmap.uaz_ct, 1820, 5, 130));
+        vehicles.add(new Vehicles("UAZ (Opened Top)", getResources().getString(R.string.uaz_ot), "Erangal, Sanhok",
+                R.mipmap.uaz_ot, 1820, 5, 130));
+        vehicles.add(new Vehicles("Dacia 1300", getResources().getString(R.string.dacia), "Erangal",
+                R.mipmap.decia, 1820, 5, 139));
+        vehicles.add(new Vehicles("Pickup Truck", getResources().getString(R.string.pickup), "Miramar",
+                R.mipmap.pickup, 1820, 4, 100));
+        vehicles.add(new Vehicles("Van", getResources().getString(R.string.van), "Miramar",
+                R.mipmap.van, 1820, 6, 80));
+        vehicles.add(new Vehicles("Aquarali (Jet ski)", getResources().getString(R.string.aqua), "Erangal, Miramar",
+                R.mipmap.aqua, 1820, 2, 120));
+        vehicles.add(new Vehicles("Motorcycle (Sidecar)", getResources().getString(R.string.motorcycle), "Erangal, Miramar, Sanhok",
+                R.mipmap.sidecar, 1025, 3, 130));
+        vehicles.add(new Vehicles("Motorcycle", getResources().getString(R.string.mot), "Erangal, Miramar, Sanhok",
+                R.mipmap.moto, 1025, 2, 152));
+        vehicles.add(new Vehicles("Buggy", getResources().getString(R.string.buggy), "Erangal, Miramar, Sanhok",
+                R.mipmap.buggy, 1540, 2, 100));
+        vehicles.add(new Vehicles("PG-117", getResources().getString(R.string.pg), "Erangal",
+                R.mipmap.boat, 1520, 5, 90));
+
+
+        VehicleAdapter adapter = new VehicleAdapter(this, vehicles, mode);
+        recyclerView.setAdapter(adapter);
+    }
+
     @SuppressLint("SetTextI18n")
     private void addContent(boolean mode) {
         String type = getIntent().getStringExtra("type");
@@ -88,7 +119,11 @@ public class WeaponsListActivity extends AppCompatActivity {
                 break;
             case "ATTACHMENT":
                 addAttachment(mode);
-                title.setText("Attachments");
+                title.setText("Best Attachments");
+                break;
+            case "VEHICLE":
+                addVehicle(mode);
+                title.setText("Best Vehicle");
                 break;
         }
     }
@@ -332,4 +367,5 @@ public class WeaponsListActivity extends AppCompatActivity {
         WeaponsAdapter adapter = new WeaponsAdapter(this, weapons, mode);
         recyclerView.setAdapter(adapter);
     }
+
 }

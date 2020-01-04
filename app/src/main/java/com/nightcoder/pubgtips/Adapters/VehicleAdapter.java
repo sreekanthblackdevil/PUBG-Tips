@@ -1,7 +1,6 @@
 package com.nightcoder.pubgtips.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +13,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
-import com.nightcoder.pubgtips.GunDetailsActivity;
-import com.nightcoder.pubgtips.Models.Attachments;
-import com.nightcoder.pubgtips.Models.Weapons;
+import com.nightcoder.pubgtips.Models.Vehicles;
 import com.nightcoder.pubgtips.R;
 
 import java.util.List;
 
-public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.ViewHolder> {
+public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<Attachments> mWeapons;
+    private List<Vehicles> mItems;
     private boolean darkMode;
 
-    public AttachmentAdapter(Context context, List<Attachments> weapons, boolean mode) {
+    public VehicleAdapter(Context context, List<Vehicles> weapons, boolean mode) {
         this.darkMode = mode;
-        this.mWeapons = weapons;
+        this.mItems = weapons;
         this.mContext = context;
     }
 
@@ -37,26 +34,34 @@ public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == 0)
-            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_attachment, parent, false));
+            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_vehicle, parent, false));
         else
-            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_attachment_dark, parent, false));
+            return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_vehicle_dark, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Attachments weapon = mWeapons.get(position);
-        holder.title.setText(weapon.getTitle());
-        holder.type.setText(weapon.getType());
-        holder.about.setText(weapon.getAbout());
-        holder.image.setImageResource(weapon.getImageId());
+        final Vehicles item = mItems.get(position);
+        holder.title.setText(item.getTitle());
+        holder.type.setText(item.getMap());
+        holder.about.setText(item.getAbout());
+        holder.image.setImageResource(item.getImageId());
 
         holder.container.setVisibility(View.VISIBLE);
         holder.container.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.feature_item_animation));
+
+        holder.seatVal.setText(String.valueOf(item.getSeats()));
+        holder.speedVal.setText(String.valueOf(item.getSpeed()));
+        holder.healthVal.setText(String.valueOf(item.getHealth()));
+
+        holder.speed.setProgress(item.getSpeed());
+        holder.seats.setProgress(item.getSeats());
+        holder.health.setProgress(item.getHealth());
     }
 
     @Override
     public int getItemCount() {
-        return mWeapons.size();
+        return mItems.size();
     }
 
     @Override
@@ -68,9 +73,10 @@ public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.Vi
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title, about, type;
+        private TextView title, about, type, speedVal, seatVal, healthVal;
         private ImageView image;
         private RelativeLayout container;
+        private RoundCornerProgressBar speed, seats, health;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,7 +86,13 @@ public class AttachmentAdapter extends RecyclerView.Adapter<AttachmentAdapter.Vi
             container.setVisibility(View.GONE);
             about = itemView.findViewById(R.id.about);
             image = itemView.findViewById(R.id.image);
-            type = itemView.findViewById(R.id.type);
+            type = itemView.findViewById(R.id.map);
+            speedVal = itemView.findViewById(R.id.val_speed);
+            seatVal = itemView.findViewById(R.id.val_seats);
+            healthVal = itemView.findViewById(R.id.val_health);
+            speed = itemView.findViewById(R.id.speed);
+            seats = itemView.findViewById(R.id.seats);
+            health = itemView.findViewById(R.id.health);
         }
     }
 }

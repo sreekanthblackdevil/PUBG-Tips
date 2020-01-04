@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/content_outline_light"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/orbitron_bold"
+        android:text="UAZ (Closed Top)"
+        android:textColor="#2196F3"
+        android:textSize="17sp"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/cont2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/view_color" />
+
+    <RelativeLayout
+        android:id="@+id/cont2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/uaz_ct" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image"
+            android:fontFamily="@font/jura_regular"
+            android:padding="10dp"
+            android:text="@string/ar_fh"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont2"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/jura_regular"
+            android:text="Health"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/health"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/val_health"
+                app:rcBackgroundColor="#4D000000"
+                app:rcBackgroundPadding="3dp"
+                app:rcMax="2000"
+                app:rcProgressColor="#08CC10"
+                app:rcRadius="10dp"
+                app:rcReverse="false" />
+
+            <TextView
+                android:id="@+id/val_health"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/orbitron_medium"
+                android:text="130"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/jura_regular"
+            android:text="Max Speed"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/speed"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/val_speed"
+                app:rcBackgroundColor="#4D000000"
+                app:rcBackgroundPadding="3dp"
+                app:rcMax="150"
+                app:rcProgressColor="#5265CA"
+                app:rcRadius="10dp"
+                app:rcReverse="false" />
+
+            <TextView
+                android:id="@+id/val_speed"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/orbitron_medium"
+                android:text="130"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/jura_regular"
+            android:text="Seats"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/seats"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/val_seats"
+                app:rcBackgroundColor="#4D000000"
+                app:rcBackgroundPadding="3dp"
+                app:rcMax="10"
+                app:rcProgressColor="#2196F3"
+                app:rcRadius="10dp"
+                app:rcReverse="false" />
+
+            <TextView
+                android:id="@+id/val_seats"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/orbitron_medium"
+                android:text="130"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/orbitron_medium"
+            android:text="Erangal"
+            android:textAlignment="center"
+            android:textColor="#8149E6"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</RelativeLayout>

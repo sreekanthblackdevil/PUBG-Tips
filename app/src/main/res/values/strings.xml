@@ -17,6 +17,10 @@
         "translate large-scale battle royale to the small screen remarkably well—and best of all, "
         "they’re completely free."
     </string>
+    <string name="vehicle">
+        These cars, jeeps and even speed boats are important to map movement. moving to the center of the map from a far away direction is easily done by finding some transportation for yourself or teammates. For example, with the UAZ Closed Top,
+        you navigate rather safely since it would require a direct head shot or body shot to take damage while driving in this jeep.
+    </string>
     <string name="tips_text">
         "Read our guide on how to become a master of Player Unknown\'s Battlegrounds on mobile."
         "Our top tips and tricks for PUBG to help you get …"
@@ -238,5 +242,37 @@
         Improved accuracy and stability.\n
 -30.00% Reload Duration\n
 -50.00% Spread Base
+    </string>
+    <string name="uaz_ot">
+        Similar to the other UAZ except this one has an open frame which makes you more vulnerable to bullets.
+    </string>
+    <string name="uaz_ct">
+        Closed frame vehicle that is entirely closed from the exterior area and 5
+        seats for other players makes this one of the best vehicles in PlayerUnknowns Battlegrounds.
+    </string>
+    <string name="van">
+        Closed frame vehicle that is entirely closed from the exterior area and 6
+        seats for other players
+    </string>
+    <string name="dacia">
+        The layout of the vehicle is the engine in front, rear wheel drive, making not ideal for off road traveling.
+    </string>
+    <string name="pickup">
+        It has very good traction in rocky mountain terrain.
+    </string>
+    <string name="motorcycle">
+        It has very good traction and has very low fuel consumption. One of the Fastest Vehicles In PlayerUnknowns Battlegrounds.
+    </string>
+    <string name="pg">
+        Speedboat is another really fast PUBG Vehicle, but there’s a huge trade-off as the boat has no cover or protection against bullets.
+    </string>
+    <string name="buggy">
+        The Buggy is light making it a fast, however, its open frames leaves you vulnerable to bullets.
+    </string>
+    <string name="mot">
+        Another fast option for traveling, but also the easiest for other players to shoot you off.
+    </string>
+    <string name="aqua">
+        Aquaralli is another really fast PUBG Vehicle, but there’s a huge trade-off as the boat has no cover or protection against bullets.
     </string>
 </resources>

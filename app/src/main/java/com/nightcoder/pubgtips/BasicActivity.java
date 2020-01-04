@@ -104,6 +104,11 @@ public class BasicActivity extends AppCompatActivity {
                 getResources().getString(R.string.weapon_tire_list_text),
                 "Find best Weapons",
                 R.mipmap.rifle));
+        contents.add(new Contents(
+                "Best Vehicles in PUBG",
+                getResources().getString(R.string.vehicle),
+                "Find best Weapons",
+                R.mipmap.car));
 
 
 
