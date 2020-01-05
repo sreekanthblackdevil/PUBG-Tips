@@ -2,14 +2,14 @@
     <string name="app_name">PUBG Tips</string>
 
     <!-- Test Ads -->
-    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!--    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+    <!--    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>-->
 
     <!--Genuine Ads-->
-    <!--    <string name="app_id">ca-app-pub-5006897003986415~3679281942</string>-->
-    <!--    <string name="banner_id">ca-app-pub-5006897003986415/6762764372</string>-->
-    <!--    <string name="interstitial_id">ca-app-pub-5006897003986415/9645924496</string>-->
+    <string name="app_id">ca-app-pub-5006897003986415~3679281942</string>
+    <string name="banner_id">ca-app-pub-5006897003986415/6762764372</string>
+    <string name="interstitial_id">ca-app-pub-5006897003986415/9645924496</string>
 
 
     <string name="get_start_text">
