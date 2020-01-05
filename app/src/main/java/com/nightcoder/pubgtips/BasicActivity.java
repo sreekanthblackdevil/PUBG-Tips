@@ -1,20 +1,23 @@
 package com.nightcoder.pubgtips;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nightcoder.pubgtips.Adapters.ContentAdapter;
 import com.nightcoder.pubgtips.Models.Contents;
 
@@ -22,16 +25,15 @@ import java.util.ArrayList;
 
 public class BasicActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private ImageButton themeButton;
-    private Toolbar toolbar;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic);
-        themeButton = findViewById(R.id.theme_button);
+        ImageButton themeButton = findViewById(R.id.theme_button);
         recyclerView = findViewById(R.id.recycler_view);
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         Window window = getWindow();
@@ -58,6 +60,7 @@ public class BasicActivity extends AppCompatActivity {
 
         if (getDelegate().getLocalNightMode() != AppCompatDelegate.MODE_NIGHT_YES) {
             addContents(false);
+            loadAds();
             toolbar.setBackground(getDrawable(R.drawable.toolbar_background));
             window.setStatusBarColor(getResources().getColor(R.color.white));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -65,6 +68,7 @@ public class BasicActivity extends AppCompatActivity {
             }
         } else {
             addContents(true);
+            loadAds();
             toolbar.setBackground(getDrawable(R.drawable.toolbar_background_dark));
             window.setStatusBarColor(getResources().getColor(R.color.dark));
         }
@@ -111,8 +115,36 @@ public class BasicActivity extends AppCompatActivity {
                 R.mipmap.car));
 
 
-
         ContentAdapter contentAdapter = new ContentAdapter(this, contents, enableDark);
         recyclerView.setAdapter(contentAdapter);
+    }
+
+    private void loadAds() {
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getResources().getString(R.string.interstitial_id));
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+        interstitialAd.setAdListener(adListener);
+        AdView adView = findViewById(R.id.adView);
+        adView.loadAd(new AdRequest.Builder().build());
+    }
+
+    private AdListener adListener = new AdListener() {
+        @Override
+        public void onAdLoaded() {
+            super.onAdLoaded();
+            interstitialAd.show();
+        }
+
+        @Override
+        public void onAdOpened() {
+            super.onAdOpened();
+            interstitialAd.setAdListener(null);
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        interstitialAd.setAdListener(null);
     }
 }

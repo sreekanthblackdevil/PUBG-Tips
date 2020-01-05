@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark"
     tools:context=".GunDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="@drawable/toolbar_background"
+        android:background="@drawable/toolbar_background_dark"
         android:elevation="5dp">
 
         <RelativeLayout
@@ -26,6 +26,7 @@
                 android:layout_centerVertical="true"
                 android:fontFamily="@font/orbitron_bold"
                 android:text="Weapon Details"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 tools:ignore="HardcodedText" />
 
@@ -46,8 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/adView"
-        android:layout_below="@id/toolbar"
-        android:layout_marginBottom="6dp">
+        android:layout_below="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/content_outline">
+                android:background="@drawable/content_outline_light">
 
                 <TextView
                     android:id="@+id/title"
@@ -141,6 +141,7 @@
                         android:padding="6dp"
                         android:text="@string/awm_description"
                         android:textAlignment="center"
+                        android:textColor="@color/white"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -190,7 +191,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/content_outline"
+                android:background="@drawable/content_outline_light"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -212,7 +213,7 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="Damage"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
@@ -226,10 +227,10 @@
                         android:layout_height="15dp"
                         android:layout_marginEnd="10dp"
                         android:layout_toStartOf="@id/val_damage"
-                        app:rcBackgroundColor="#80DADADA"
+                        app:rcBackgroundColor="#4D000000"
                         app:rcBackgroundPadding="3dp"
                         app:rcMax="150"
-                        app:rcProgressColor="#009106"
+                        app:rcProgressColor="#00E709"
                         app:rcRadius="10dp"
                         app:rcReverse="false" />
 
@@ -240,7 +241,7 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/orbitron_medium"
                         android:text="130"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         tools:ignore="HardcodedText" />
                 </RelativeLayout>
 
@@ -251,7 +252,7 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="Range (Meter)"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
@@ -265,10 +266,10 @@
                         android:layout_height="15dp"
                         android:layout_marginEnd="10dp"
                         android:layout_toStartOf="@id/val_range"
-                        app:rcBackgroundColor="#80DADADA"
+                        app:rcBackgroundColor="#4D000000"
                         app:rcBackgroundPadding="3dp"
                         app:rcMax="1200"
-                        app:rcProgressColor="#673AB7"
+                        app:rcProgressColor="#8445F3"
                         app:rcRadius="10dp"
                         app:rcReverse="false" />
 
@@ -279,7 +280,7 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/orbitron_medium"
                         android:text="130"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         tools:ignore="HardcodedText" />
                 </RelativeLayout>
 
@@ -290,7 +291,7 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="Magazine Capacity"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
@@ -304,7 +305,7 @@
                         android:layout_height="15dp"
                         android:layout_marginEnd="10dp"
                         android:layout_toStartOf="@id/val_mag"
-                        app:rcBackgroundColor="#80DADADA"
+                        app:rcBackgroundColor="#4D000000"
                         app:rcBackgroundPadding="3dp"
                         app:rcMax="100"
                         app:rcProgressColor="#2196F3"
@@ -318,7 +319,7 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/orbitron_medium"
                         android:text="1000"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         tools:ignore="HardcodedText" />
                 </RelativeLayout>
 
@@ -329,7 +330,7 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="Bullet Speed(m/s)"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
@@ -343,10 +344,10 @@
                         android:layout_height="15dp"
                         android:layout_marginEnd="10dp"
                         android:layout_toStartOf="@id/val_speed"
-                        app:rcBackgroundColor="#80DADADA"
+                        app:rcBackgroundColor="#4D000000"
                         app:rcBackgroundPadding="3dp"
                         app:rcMax="1000"
-                        app:rcProgressColor="#009688"
+                        app:rcProgressColor="#42F3E3"
                         app:rcRadius="10dp"
                         app:rcReverse="false" />
 
@@ -357,7 +358,7 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/orbitron_medium"
                         android:text="1000"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         tools:ignore="HardcodedText" />
                 </RelativeLayout>
 
@@ -368,7 +369,7 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="Fire Rate(s)"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <RelativeLayout
@@ -382,10 +383,10 @@
                         android:layout_height="15dp"
                         android:layout_marginEnd="10dp"
                         android:layout_toStartOf="@id/val_rate"
-                        app:rcBackgroundColor="#80DADADA"
+                        app:rcBackgroundColor="#4D000000"
                         app:rcBackgroundPadding="3dp"
                         app:rcMax="2"
-                        app:rcProgressColor="#FFC107"
+                        app:rcProgressColor="#DFEE4C"
                         app:rcRadius="10dp"
                         app:rcReverse="false" />
 
@@ -396,16 +397,17 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/orbitron_medium"
                         android:text="1000"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         tools:ignore="HardcodedText" />
                 </RelativeLayout>
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/content_outline"
+                android:background="@drawable/content_outline_light"
                 android:orientation="vertical">
 
                 <TextView
@@ -422,8 +424,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="The per shot damage without any multipliers applied."
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -440,8 +444,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="The amount of Ammo you can fit into your gun at one time."
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -458,8 +464,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="The effective rate of fire, in other words, the time between each bullet shot."
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -476,8 +484,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="The effective range before the damage is reduced to 0. (Measured using Zeroing)"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -494,9 +504,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/jura_regular"
                     android:text="The speed in which the bullet travels from the barrel of the gun to aimed location. (The Higher the Number the less you will need to lead your shoots.)"
+                    android:textColor="@color/white"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
@@ -506,12 +518,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/content_outline"
+                android:background="@drawable/content_outline_light"
                 android:fontFamily="@font/orbitron_bold"
+                android:foreground="?android:selectableItemBackground"
                 android:gravity="center"
                 android:text="Find Attachments"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
     </ScrollView>
@@ -524,5 +537,4 @@
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_id" />
-
 </RelativeLayout>

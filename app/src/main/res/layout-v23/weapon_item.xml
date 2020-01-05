@@ -2,11 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="130dp"
+    android:id="@+id/container"
+    android:foreground="?android:selectableItemBackground"
     android:layout_margin="10dp"
-    android:background="@drawable/content_outline_light"
+    android:background="@drawable/content_outline"
     android:orientation="vertical">
 
     <TextView
@@ -18,7 +19,7 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/orbitron_bold"
         android:text="Title"
-        android:textColor="#1E9ED8"
+        android:textColor="#0888C2"
         android:textSize="17sp"
         tools:ignore="HardcodedText" />
 
@@ -37,8 +38,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_marginEnd="5dp"
-        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
-        android:tint="@color/white" />
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
     <LinearLayout
         android:id="@+id/ammo_con"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/jura_regular"
             android:text="7.62"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
@@ -89,10 +89,10 @@
             android:layout_width="match_parent"
             android:layout_height="15dp"
             android:layout_marginTop="2dp"
-            app:rcBackgroundColor="#4D000000"
+            app:rcBackgroundColor="#80DADADA"
             app:rcBackgroundPadding="3dp"
             app:rcMax="150"
-            app:rcProgressColor="#04D50C"
+            app:rcProgressColor="#009106"
             app:rcRadius="10dp"
             app:rcReverse="false" />
 
@@ -109,11 +109,11 @@
             android:layout_width="match_parent"
             android:layout_height="15dp"
             android:layout_marginTop="2dp"
-            app:rcBackgroundColor="#4D000000"
+            app:rcBackgroundColor="#80DDDDDD"
             app:rcBackgroundPadding="3dp"
             app:rcMax="1000"
             app:rcProgress="500"
-            app:rcProgressColor="#743CD8"
+            app:rcProgressColor="#673AB7"
             app:rcRadius="10dp"
             app:rcReverse="false" />
     </LinearLayout>

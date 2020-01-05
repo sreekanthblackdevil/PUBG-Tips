@@ -7,9 +7,9 @@
     <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 
     <!--Genuine Ads-->
-    <!--    <string name="app_id">ca-app-pub-5225299964519935~1292643053</string>-->
-    <!--    <string name="banner_id">ca-app-pub-5225299964519935/5412346300</string>-->
-    <!--    <string name="interstitial_id">ca-app-pub-5225299964519935/2115905604</string>-->
+    <!--    <string name="app_id">ca-app-pub-5006897003986415~3679281942</string>-->
+    <!--    <string name="banner_id">ca-app-pub-5006897003986415/6762764372</string>-->
+    <!--    <string name="interstitial_id">ca-app-pub-5006897003986415/9645924496</string>-->
 
 
     <string name="get_start_text">
@@ -77,9 +77,6 @@
     <string name="s12k_description">
         A very beginner-friendly shotgun that is capable of going full-auto for rapid fire shots.
     </string>
-    <string name="s686_description">
-        Extremely high damage in short range. Effective in close quarter fights where opponents are not fully-equipped.
-    </string>
     <string name="s1897_description">
         Powerful in the early game but damage &amp; firepower is lower than most shotguns in-game.
     </string>
@@ -94,9 +91,6 @@
     </string>
     <string name="sks_description">
         This marksman rifle has large DPS and rapid fire rate but has high recoil.
-    </string>
-    <string name="slr_description">
-        Another marksman rifle with high amount of recoil but has higher damage &amp; fire rate than the SKS.
     </string>
     <string name="mk14_description">
         This DMR is capable of going full-auto and is only available through supply drops.
@@ -139,9 +133,6 @@
     <string name="p18c_description">
         The P18C is currently the only handgun that has full auto shooting mode.
         Players can rain bullets on opponents &amp; eliminate them instantly in close range combat
-    </string>
-    <string name="r45_description">
-        The R45 packs a big punch, dealing 46 damage per shot. However, this is counteracted by it\'s relatively slow firing speed.
     </string>
     <string name="win98">
         The Win94 is a unique Sniper Rifle in the fact that it cannot be equipped with any scope.
@@ -194,11 +185,6 @@
 -10.00% Sway\n
 -20.00% Recoil Pattern\n
 +15.00% Recoil Recovery
-    </string>
-    <string name="chock">
-        The choke makes the shotgun spread less, making longer shots easier.\n
--18.20% Shot Spread\n
-+15.40% Shot Speed
     </string>
     <string name="smg_comp">
         Counter the recoil of a firearm and prevent the muzzle from climbing due to kickback from the rapid firing.\n
@@ -274,5 +260,65 @@
     </string>
     <string name="aqua">
         Aquaralli is another really fast PUBG Vehicle, but there’s a huge trade-off as the boat has no cover or protection against bullets.
+    </string>
+    <string name="getstart_1">
+        When you first jump into PUBG mobile you will get to create your character, it’s not the deepest character creation system we have ever seen,
+        but the real customisation comes through cosmetic clothing unlocks further down the road.
+        So there is no reason to spend too much time on this.
+        After creating a character you will select your experience level with shooters and battle royale games.
+        This setting will dictate if you play with bots for your first few matches, or with actual humans, so choose wisely,
+        although a few warm up matches with bots is a solid idea for newcomers.
+        To actually jump into your first game you will want to hit the big “START” button in the top left of the main lobby screen.
+        However, by tapping the box below that you can select which type of match you want to play, squads, duos or solo and first person or third person.
+        Once you have hit level five you can also choose which of the two currently available maps, Erangle or Miramar, you want to play, and at level 10
+        you can choose to play in some of the arcade modes such as War or a Quick Match which is limited to eight minutes.
+        Once you hit start button you’ll be thrown into a match and from thereon out its battle royale as you know it.
+        Drop from the plane, find some loot, kill some fools and stay in the circle until you either meet an early end,
+        or walk out with a chicken dinner.
+    </string>
+    <string name="getstart_0">
+        Once installed you will either have to register to play as a guest, or link your Facebook or Twitter account.
+        On iOS you can also choose to log in via your Game Center account, but you will have to hit the “more” button next to the other options to find the Game Center setting.
+        After you have selected a way to log in and agreed to some terms and conditions, then you are good to go.
+    </string>
+    <string name="dif_mob_console">
+        While Fortnite is the exact same game on mobile as it is on PC and console, the same cannot be said for PUBG.
+        PUBG Mobile is its own thing, and there is no way to carry over progress from the PC and console versions to the mobile version.
+        This is mostly because there is quite a few differences between the versions.
+        The most obvious is the vastly different content available.
+        Only two of the three maps PC players have are available on the mobile version, with Sanhok nowhere to be seen as of yet.
+        The same can be said with a number of weapons, and there are a couple of very small differences on the maps.
+        Then there are the very different cosmetics. With PUBG Mobile being free to play their main source of income is cosmetic items,
+        so as you may expect there’s a lot more in the mobile than in the PC and Xbox versions.
+        Some of the mobile only cosmetics are actually quite cool, and we would love to see them make their way to the other platforms at some point.
+    </string>
+    <string name="tip1">
+        We already have tips for all three PUBG maps, which are accurately reproduced on PUBG mobile.
+        For the most part if you are good on PC or console then you should be able to translate that success into PUBG Mobile,
+        as it\'s effectively the same game. However,
+        with that being said there are a few things you should be aware of when playing.
+    </string>
+    <string name="tip2">
+        On PC and console leaning becomes second nature. Being able to stick your head out but keep the rest of your body safely
+        behind cover makes it a lot harder to hit you, and is a core mechanic. But on mobile it can be harder to use this tactic
+        as you’ll have to move your thumbs away from moving and aiming to do so. This does make it a little harder to use well,
+        but with some practise you can master this and stop putting your whole body at risk. Oh,
+        and make sure the buttons are actually activated in the settings menu.
+    </string>
+    <string name="tip3">
+        Playing with sound is always going to be preferable, as it will allow you to hear what is going on in your vicinity,
+        but if that isn’t possible then there is another way to work out where those shots are coming from. The direction of
+        any shots in your direction, or those close to you, will be shown on the mini map.
+        You can then spin to that position and unload a spray of bullets at whoever thought they had caught you off guard.
+    </string>
+    <string name="tip5">
+        Sure, some people may say auto-aim is for noobs, but when it helps out this much there really is no reason to turn it off,
+        unless you want to go pro. The auto-aim on PUBG Mobile is crazy good at times, and you should assume that all your
+        foes will be using it too.
+        Make sure to keep this on, and you will barely ever miss a shot again.
+    </string>
+    <string name="tip4">
+        One of the ways that PUBG Mobile runs smoothly on lower end devices is to only render the grass and foliage close to the player, so that means if you think you are being a sneaky snake in the grass, you actually just look like a muppet crawling through a field to anyone with a 4x or better scope.
+        Always stick to hard cover if possible. Crawling through the grass only really works in the very late game circles.
     </string>
 </resources>

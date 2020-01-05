@@ -1,11 +1,13 @@
 package com.nightcoder.pubgtips;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.nightcoder.pubgtips.Adapters.AttachmentAdapter;
 import com.nightcoder.pubgtips.Adapters.GrenadeAdapter;
 import com.nightcoder.pubgtips.Adapters.VehicleAdapter;
@@ -30,6 +36,7 @@ public class WeaponsListActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private TextView title;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,43 @@ public class WeaponsListActivity extends AppCompatActivity {
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             }
         }
+
+        ImageButton share = findViewById(R.id.share_btn);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,
+                        "Hey check out my app at: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
+        loadAds();
+    }
+
+    private void loadAds() {
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getResources().getString(R.string.interstitial_id));
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+        interstitialAd.setAdListener(adListener);
+        AdView adView = findViewById(R.id.adView);
+        adView.loadAd(new AdRequest.Builder().build());
+    }
+
+    private AdListener adListener = new AdListener() {
+        @Override
+        public void onAdLoaded() {
+            super.onAdLoaded();
+            interstitialAd.show();
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        interstitialAd.setAdListener(null);
     }
 
     private void addVehicle(boolean mode) {

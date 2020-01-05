@@ -1,11 +1,13 @@
 package com.nightcoder.pubgtips;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +46,7 @@ public class GunDetailsActivity extends AppCompatActivity {
         loadAds();
 
         TextView title = findViewById(R.id.title);
+        TextView attachment = findViewById(R.id.attachment);
         TextView ammo_gauge = findViewById(R.id.ammo_gauge);
         TextView type = findViewById(R.id.type);
         TextView about = findViewById(R.id.description);
@@ -81,6 +84,27 @@ public class GunDetailsActivity extends AppCompatActivity {
         speed_val.setText(String.valueOf(weapon.getBulletSpeed()));
         rate_val.setText(String.valueOf(weapon.getFireRate()));
 
+        attachment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GunDetailsActivity.this, WeaponsListActivity.class)
+                        .putExtra("type", "ATTACHMENT"));
+            }
+        });
+
+        ImageButton share = findViewById(R.id.share_btn);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,
+                        "Hey check out my app at: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
+
     }
 
     private void loadAds() {
@@ -101,8 +125,8 @@ public class GunDetailsActivity extends AppCompatActivity {
     };
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+    protected void onPause() {
+        super.onPause();
         interstitialAd.setAdListener(null);
     }
 }
